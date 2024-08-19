@@ -23,9 +23,6 @@ class Person {
   }
 }
 
-let person1 = new Person();
-console.log(person1);
-
 /*
 Task 2: Code a Worker class
 Code a sub-class, inheriting from the Person class, and name it Worker.
@@ -41,7 +38,7 @@ Additionally, it has the goToWork() method, which, whenever it's run, increases 
 
 // Task 2: Code a Worker class
 class Worker extends Person {
-  constructor(xp = 0, hourlyWage = 10, name, age, energy) {
+  constructor(name, age, energy, xp = 0, hourlyWage = 10) {
     super(name, age, energy);
     this.xp = xp;
     this.hourlyWage = hourlyWage;
@@ -51,9 +48,6 @@ class Worker extends Person {
     this.xp += 10;
   }
 }
-
-let worker1 = new Worker();
-console.log(worker1);
 
 /*
 Task 3: Code a intern object
@@ -69,12 +63,30 @@ Run the goToWork() method on the intern object. Then return the intern object.
 
 // Task 3: Code an intern object, run methods
 function intern() {
-  let worker1 = new Worker(0, 10, "Bob", 21, 110);
-  worker1.goToWork();
-  return worker1;
+  let intern = new Worker("Bob", 21, 110, 0, 10);
+  intern.goToWork();
+  return intern;
 }
 
 console.log(intern());
 
+/*
+Task 4: Code a manager object
+Inside the manager function instantiate the Worker class to code a new manager object.
+The manager object should have the following characteristics:
+name: Alice
+age: 30
+energy: 120
+xp: 100
+hourlyWage: 30
+Run the doSomethingFun() method on the manager object. Then return the manager object.
+*/
+
 // Task 4: Code a manager object, methods
-function manager() {}
+function manager() {
+  let manager = new Worker("Alice", 30, 120, 100, 30);
+  manager.doSomethingFun();
+  return manager;
+}
+
+console.log(manager());
