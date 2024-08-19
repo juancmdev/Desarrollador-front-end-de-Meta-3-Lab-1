@@ -68,7 +68,13 @@ Run the goToWork() method on the intern object. Then return the intern object.
 */
 
 // Task 3: Code an intern object, run methods
-function intern() {}
+function intern() {
+  let worker1 = new Worker(0, 10, "Bob", 21, 110);
+  worker1.goToWork();
+  return worker1;
+}
+
+console.log(intern());
 
 // Task 4: Code a manager object, methods
 function manager() {}
