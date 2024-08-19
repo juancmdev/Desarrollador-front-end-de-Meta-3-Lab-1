@@ -77,7 +77,7 @@ function animalCan() {
   bird.hasFeathers = true;
 
   for (prop in bird) {
-    console.log(prop);
+    console.log(`${prop}: ${bird[prop]}`);
   }
 }
 
