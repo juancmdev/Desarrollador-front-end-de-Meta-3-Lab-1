@@ -40,11 +40,32 @@ Additionally, it has the goToWork() method, which, whenever it's run, increases 
 */
 
 // Task 2: Code a Worker class
-class Worker extends Person() {
+class Worker extends Person {
   constructor(xp = 0, hourlyWage = 10, name, age, energy) {
     super(name, age, energy);
+    this.xp = xp;
+    this.hourlyWage = hourlyWage;
+    this.energy = energy;
+  }
+  goToWork() {
+    this.xp += 10;
   }
 }
+
+let worker1 = new Worker();
+console.log(worker1);
+
+/*
+Task 3: Code a intern object
+Inside the intern function instantiate the Worker class to code a new intern object.
+The intern should have the following characteristics:
+name: Bob
+age: 21
+energy: 110
+xp: 0
+hourlyWage: 10
+Run the goToWork() method on the intern object. Then return the intern object.
+*/
 
 // Task 3: Code an intern object, run methods
 function intern() {}
