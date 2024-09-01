@@ -11,7 +11,7 @@ Step 4: Still inside the for loop, add an if condition, checking that the taxBoo
 * the price of the currently looped-over object from the dishData array, and * the tax value. Assign the multiplied value to the finalPrice variable. OK
 
 Step 5: Right after the if condition, add an else if, checking if the value of taxBoolean is false. Inside this condition's block, assign the currently 
-looped-over dish price property in the dishData array to the finalPrice variable.
+looped-over dish price property in the dishData array to the finalPrice variable. OK
 
 Step 6: Code the else case, and inside of it, add two lines of code:
 
@@ -82,12 +82,15 @@ const tax = 1.2;
 function getPrices(taxBoolean) {
   for (let dish of dishData) {
     let finalPrice;
-    if (taxBoolean) {
+    if (taxBoolean == true) {
       finalPrice = dish.price * tax;
       console.log(finalPrice);
-    } else {
+    } else if (taxBoolean == false) {
       finalPrice = dish.price;
       console.log(finalPrice);
+    } else {
+      console.log("You need to pass a boolean to the getPrices call!");
+      return;
     }
   }
 }
@@ -97,4 +100,4 @@ function getDiscount() {}
 
 // Call getDiscount()
 
-getPrices(true);
+getPrices(false);
