@@ -1,9 +1,9 @@
 /*
 Assignment Instructions
 In this exercise, you will work with some data provided as an array of objects, listing information about dishes available in the Little Lemon restaurant.
-Step 1: In the function getPrices(), give it the parameter of taxBoolean.
+Step 1: In the function getPrices(), give it the parameter of taxBoolean. OK
 
-Step 2: Inside the getPrices() function, code a for loop that will loop over all the objects inside the dishData array.
+Step 2: Inside the getPrices() function, code a for loop that will loop over all the objects inside the dishData array. OK
 
 Step 3: Inside the for loop, declare a finalPrice variable, without assigning it a value.
 
@@ -79,9 +79,15 @@ const dishData = [
 const tax = 1.2;
 
 // Implement getPrices()
-function getPrices(taxBoolean) {}
+function getPrices(taxBoolean) {
+  dishData.forEach((dish) => {
+    console.log(dish);
+  });
+}
 
 // Implement getDiscount()
 function getDiscount() {}
 
 // Call getDiscount()
+
+getPrices();
