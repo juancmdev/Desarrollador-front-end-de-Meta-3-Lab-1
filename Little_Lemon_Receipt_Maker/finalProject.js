@@ -86,32 +86,20 @@ function getPrices(taxBoolean) {
     let finalPrice;
     if (taxBoolean === true) {
       finalPrice = dish.price * tax;
-      //console.log(finalPrice);
     } else if (taxBoolean === false) {
       finalPrice = dish.price;
-      //console.log(finalPrice);
     } else {
       console.log("You need to pass a boolean to the getPrices call!");
-      //return;
+      return;
     }
-    console.log("Dish: " + dish.name + " Price: " + dish.price);
-    out.innerHTML = "Dish: " + dish.name + " Price: " + dish.price;
+    console.log("Dish: " + dish.name + " Price: $" + finalPrice.toFixed(2));
   }
 }
 
 // Implement getDiscount()
 function getDiscount(taxBoolean, guests) {
   getPrices(taxBoolean);
-  if (Number(guests) && guests >= 0 && guests <= 30) {
-    /*
-    Step 11: Inside the if statment, declare a new variable, named discount, and set it to 0. On the next line, add another if...else if: 
-    in the first if, you'll check that the value of the guests variable is less than 5. If that's the case, reassign the value of the 
-    discount variable to 5;
-    Inside the else if condition, check that the value of the guests variable is greater than or equal to 5 - if that's the case, 
-    reassign the discount variable to 10.
-    Console log the following after closing your else-if statement: 'Discount is: $' + discount);
-    */
-
+  if (Number(guests) && guests > 0 && guests < 30) {
     let discount = 0;
     if (guests < 5) {
       discount = 5;
@@ -120,14 +108,9 @@ function getDiscount(taxBoolean, guests) {
     }
     console.log(`Discount is: $${discount}`);
   } else {
-    /*
-    Step 12: In the else condition, console log the following string: 'The second argument must be a number between 0 and 30'. 
-    Since you've finished declaring both the getPrices() and the getDiscount() functions, you can now invoke the getDiscount() function 
-    several times, with various combinations of arguments, to check the behavior.
-    */
     console.log("The second argument must be a number between 0 and 30");
   }
 }
 
 // Call getDiscount()
-getDiscount(true, 10);
+getDiscount(true, 2);
