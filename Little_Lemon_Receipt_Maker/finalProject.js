@@ -85,6 +85,9 @@ function getPrices(taxBoolean) {
     if (taxBoolean) {
       finalPrice = dish.price * tax;
       console.log(finalPrice);
+    } else {
+      finalPrice = dish.price;
+      console.log(finalPrice);
     }
   }
 }
@@ -94,4 +97,4 @@ function getDiscount() {}
 
 // Call getDiscount()
 
-getPrices();
+getPrices(true);
