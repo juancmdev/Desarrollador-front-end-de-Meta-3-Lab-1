@@ -5,10 +5,10 @@ Step 1: In the function getPrices(), give it the parameter of taxBoolean. OK
 
 Step 2: Inside the getPrices() function, code a for loop that will loop over all the objects inside the dishData array. OK
 
-Step 3: Inside the for loop, declare a finalPrice variable, without assigning it a value.
+Step 3: Inside the for loop, declare a finalPrice variable, without assigning it a value. OK
 
 Step 4: Still inside the for loop, add an if condition, checking that the taxBoolean is set to true. Inside the if block, multiply the following: 
-* the price of the currently looped-over object from the dishData array, and * the tax value. Assign the multiplied value to the finalPrice variable.
+* the price of the currently looped-over object from the dishData array, and * the tax value. Assign the multiplied value to the finalPrice variable. OK
 
 Step 5: Right after the if condition, add an else if, checking if the value of taxBoolean is false. Inside this condition's block, assign the currently 
 looped-over dish price property in the dishData array to the finalPrice variable.
@@ -80,9 +80,13 @@ const tax = 1.2;
 
 // Implement getPrices()
 function getPrices(taxBoolean) {
-  dishData.forEach((dish) => {
-    console.log(dish);
-  });
+  for (let dish of dishData) {
+    let finalPrice;
+    if (taxBoolean) {
+      finalPrice = dish.price * tax;
+      console.log(finalPrice);
+    }
+  }
 }
 
 // Implement getDiscount()
