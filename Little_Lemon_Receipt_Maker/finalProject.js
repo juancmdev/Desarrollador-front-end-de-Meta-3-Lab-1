@@ -34,7 +34,7 @@ it the taxBoolean as an argument. OK
 Step 10: On another line, you need to implement your defensive coding skills, and check that the type of the guests parameter is 
 'number' and that the value of the guests variable is greater than zero and less than 30. If all these conditions return true, 
 code the body of the conditional as described in the next step. If they don't all return true, code the body of the else conditional 
-as instructed in step 12.
+as instructed in step 12. OK
 
 Step 11: Inside the if statment, declare a new variable, named discount, and set it to 0. On the next line, add another if...else if: 
 in the first if, you'll check that the value of the guests variable is less than 5. If that's the case, reassign the value of the 
@@ -106,9 +106,20 @@ function getPrices(taxBoolean) {
 function getDiscount(taxBoolean, guests) {
   getPrices(taxBoolean);
   if (Number(guests) && guests > 0 && guests < 30) {
-    console.log("Guest: " + guests + " is number");
+    /*
+    Step 11: Inside the if statment, declare a new variable, named discount, and set it to 0. On the next line, add another if...else if: 
+    in the first if, you'll check that the value of the guests variable is less than 5. If that's the case, reassign the value of the 
+    discount variable to 5;
+    Inside the else if condition, check that the value of the guests variable is greater than or equal to 5 - if that's the case, 
+    reassign the discount variable to 10.
+    Console log the following after closing your else-if statement: 'Discount is: $' + discount);
+    */
   } else {
-    console.log(`Guest ${guests} is not a number`);
+    /*
+    Step 12: In the else condition, console log the following string: 'The second argument must be a number between 0 and 30'. 
+    Since you've finished declaring both the getPrices() and the getDiscount() functions, you can now invoke the getDiscount() function 
+    several times, with various combinations of arguments, to check the behavior.
+    */
   }
 }
 
