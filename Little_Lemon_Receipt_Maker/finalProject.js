@@ -13,13 +13,13 @@ Step 4: Still inside the for loop, add an if condition, checking that the taxBoo
 Step 5: Right after the if condition, add an else if, checking if the value of taxBoolean is false. Inside this condition's block, assign the currently 
 looped-over dish price property in the dishData array to the finalPrice variable. OK
 
-Step 6: Code the else case, and inside of it, add two lines of code:
+Step 6: Code the else case, and inside of it, add two lines of code: OK
 
 A console log of the string:
     "You need to pass a boolean to the getPrices call!"
     return (to "jump out" of the further function execution)
 
-Step 7: After all the conditional's statements, but still inside the for loop, code another console log with four arguments:
+Step 7: After all the conditional's statements, but still inside the for loop, code another console log with four arguments: OK
     The string "Dish: "
     The value of currently looped-over dish object's name property
     The string "Price: $"
@@ -84,19 +84,26 @@ function getPrices(taxBoolean) {
     let finalPrice;
     if (taxBoolean == true) {
       finalPrice = dish.price * tax;
-      console.log(finalPrice);
+      //console.log(finalPrice);
     } else if (taxBoolean == false) {
       finalPrice = dish.price;
-      console.log(finalPrice);
+      //console.log(finalPrice);
     } else {
       console.log("You need to pass a boolean to the getPrices call!");
       return;
     }
+    console.log(`Dish: ${dish.name}, "Price: ${dish.price}`);
+    /*
+    The string "Dish: "
+    The value of currently looped-over dish object's name property
+    The string "Price: $"
+    The value of the finalPrice variable
+    */
   }
 }
 
 // Implement getDiscount()
-function getDiscount() {}
+function getDiscount(taxBoolean, guests) {}
 
 // Call getDiscount()
 
