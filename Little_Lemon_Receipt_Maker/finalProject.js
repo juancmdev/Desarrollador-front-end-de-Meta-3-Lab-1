@@ -114,6 +114,13 @@ function getDiscount(taxBoolean, guests) {
     reassign the discount variable to 10.
     Console log the following after closing your else-if statement: 'Discount is: $' + discount);
     */
+
+    let discount = 0;
+    if (guests < 5) {
+      discount = 5;
+    } else if (guests >= 5) {
+      discount = 10;
+    }
   } else {
     /*
     Step 12: In the else condition, console log the following string: 'The second argument must be a number between 0 and 30'. 
