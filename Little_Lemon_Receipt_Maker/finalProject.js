@@ -105,7 +105,7 @@ function getPrices(taxBoolean) {
 // Implement getDiscount()
 function getDiscount(taxBoolean, guests) {
   getPrices(taxBoolean);
-  if (Number(guests)) {
+  if (Number(guests) && guests > 0 && guests < 30) {
     console.log("Guest: " + guests + " is number");
   } else {
     console.log(`Guest ${guests} is not a number`);
@@ -114,4 +114,4 @@ function getDiscount(taxBoolean, guests) {
 
 // Call getDiscount()
 
-getDiscount(true, 3);
+getDiscount(true, 30);
