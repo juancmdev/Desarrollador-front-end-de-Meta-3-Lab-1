@@ -57,8 +57,6 @@ What happens when you don't pass-in any arguments?
 What happens when you pass values that are not expected?
 */
 
-let out = document.querySelector("#out");
-
 // Given variables
 const dishData = [
   {
