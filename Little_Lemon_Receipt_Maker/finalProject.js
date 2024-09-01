@@ -26,10 +26,10 @@ Step 7: After all the conditional's statements, but still inside the for loop, c
     The value of the finalPrice variable
 
 Step 8: You're finshed with the getPrices() function, and now you're ready to code another function. Give the getDiscount() 
-function, two parameters: the taxBoolean and the guests parameter.
+function, two parameters: the taxBoolean and the guests parameter. OK
 
 Step 9: Inside the getDiscount() function, on the very first line of its body, invoke the getPrices() function, passing 
-it the taxBoolean as an argument.
+it the taxBoolean as an argument. OK
 
 Step 10: On another line, you need to implement your defensive coding skills, and check that the type of the guests parameter is 
 'number' and that the value of the guests variable is greater than zero and less than 30. If all these conditions return true, 
@@ -92,7 +92,7 @@ function getPrices(taxBoolean) {
       console.log("You need to pass a boolean to the getPrices call!");
       return;
     }
-    console.log(`Dish: ${dish.name}, "Price: ${dish.price}`);
+    console.log(`Dish: ${dish.name}, Price: ${dish.price}`);
     /*
     The string "Dish: "
     The value of currently looped-over dish object's name property
@@ -103,8 +103,15 @@ function getPrices(taxBoolean) {
 }
 
 // Implement getDiscount()
-function getDiscount(taxBoolean, guests) {}
+function getDiscount(taxBoolean, guests) {
+  getPrices(taxBoolean);
+  if (Number(guests)) {
+    console.log("Guest: " + guests + " is number");
+  } else {
+    console.log(`Guest ${guests} is not a number`);
+  }
+}
 
 // Call getDiscount()
 
-getPrices(false);
+getDiscount(true, 3);
